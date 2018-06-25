@@ -1,42 +1,45 @@
-<div class="panel panel-primary" *ngFor="let employee of employees">
+ <div class="container">
+    <div class="panel panel-primary" *ngFor="let employee of employees">
 
-    <div class="panle panel-heading">
-
-        <h3 class="panel-title"> {{ employee.name }} </h3>
-
-    </div>
-
-    <div class="panel panel-body">
-
-        <div class="col-md-10">
-
-            <div class="row">
-
-                <div class="col-md-6">
-                      Name:
-                </div>
-
-                <div class="col-md-6">
-                        {{ employee.name }} 
-                    </div>
-
-            </div>
-
-            <div class="row">
-
+        <div class="panle panel-heading">
+    
+            <h3 class="panel-title"> {{ employee.name }} </h3>
+    
+        </div>
+    
+        <div class="panel panel-body">
+    
+            <div class="col-md-10">
+    
+                <div class="row">
+    
                     <div class="col-md-6">
-                          Employee#:
+                          Name:
                     </div>
     
                     <div class="col-md-6">
-                            {{ employee.empno }} 
+                            {{ employee.name }} 
                         </div>
     
                 </div>
-
+    
+                <div class="row">
+    
+                        <div class="col-md-6">
+                              Employee#:
+                        </div>
+        
+                        <div class="col-md-6">
+                                {{ employee.empno }} 
+                            </div>
+        
+                    </div>
+    
+            </div>
+    
+    
         </div>
-
-
+    
     </div>
 
-</div>
+ </div>
