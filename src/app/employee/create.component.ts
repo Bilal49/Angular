@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 export class CreateComponent implements OnInit {
 
   gender:string = "female";
+  isActive:boolean = true;
+  department:number=2;
   
   constructor() { }
 
