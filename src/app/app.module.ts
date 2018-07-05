@@ -6,6 +6,7 @@ import { ListOfEmployeeComponent } from './employee/list-of-employee.component';
 import { CreateComponent } from './employee/create.component';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {BsDatepickerModule} from  'ngx-bootstrap/datepicker';
 
 const approute : Routes=[
   {path:'list', component:ListOfEmployeeComponent},
@@ -22,7 +23,8 @@ const approute : Routes=[
   imports: [
     BrowserModule,
     RouterModule.forRoot(approute),
-    FormsModule
+    FormsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

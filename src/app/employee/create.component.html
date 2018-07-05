@@ -80,7 +80,28 @@
        </select>
     </div>
 
+
+    <div class="form-group">
+      <label>Date Of Birth</label>
+      <input type="text" bsDatepicker id="dateOfBirth" name="dateOfBirth" 
+      [(ngModel)]="dateOfBirth" [bsConfig]="datepickerconfig" class="form-control"/>
+   </div>
+
   
+   <div class="form-group">
+    <label>Photo Path</label>
+    <input type="text" id="photoPath" name="photoPath" [(ngModel)]="photoPath" class="form-control"/>
+   </div>
+
+   <div class="form-group">
+    <input type="button" (click)="toggleimage()" class="btn btn-primary" value="{{ previewPhoto ? 'Hide ' : 'Show ' }}Preview"/>
+   </div>
+
+
+   <div class="form-group">
+    <img [src]="photoPath" *ngIf="previewPhoto" height="200" width="200"/>
+   </div>
+
     </div>
   
     <div class="panel-footer">
