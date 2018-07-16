@@ -22,10 +22,15 @@
       <div class="form-group" [class.has-error]="emailControl.touched && emailControl.invalid" 
       [class.has-success]="emailControl.touched && emailControl.valid">
         <label class="control-label">Email</label>
-        <input required type="text" id="email" name="email" [(ngModel)]="email" #emailControl="ngModel" class="form-control"/>
+        <input required [email]="email!=''" type="text" id="email" name="email" 
+        [(ngModel)]="email" #emailControl="ngModel" class="form-control"/>
         
-        <span class="help-block" *ngIf="emailControl.touched && emailControl.invalid">
+        <span class="help-block" *ngIf=" emailControl.errors?.required && emailControl.touched">
           Email is required.
+        </span>
+
+        <span class="help-block" *ngIf=" emailControl.errors?.email && emailControl.touched">
+          Email is invalid.
         </span>
 
      </div>
