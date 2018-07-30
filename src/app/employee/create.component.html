@@ -22,14 +22,14 @@
       <div class="form-group" [class.has-error]="emailControl.touched && emailControl.invalid" 
       [class.has-success]="emailControl.touched && emailControl.valid">
         <label class="control-label">Email</label>
-        <input required [email]="email!=''" type="text" id="email" name="email" 
+        <input required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"type="text" id="email" name="email" 
         [(ngModel)]="email" #emailControl="ngModel" class="form-control"/>
         
         <span class="help-block" *ngIf=" emailControl.errors?.required && emailControl.touched">
           Email is required.
         </span>
 
-        <span class="help-block" *ngIf=" emailControl.errors?.email && emailControl.touched">
+        <span class="help-block" *ngIf=" emailControl.errors?.pattern && emailControl.touched">
           Email is invalid.
         </span>
 
